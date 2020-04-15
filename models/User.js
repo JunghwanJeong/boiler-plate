@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const userSchema = mongoose.Schema({
 
     name : {
@@ -28,10 +27,13 @@ const userSchema = mongoose.Schema({
         type:Number,
         default:0
     },
+    
     image:String,
+    
     token:{
         type:String
     },
+    
     tokenExp:{
         type:Number
     }
@@ -39,7 +41,5 @@ const userSchema = mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = {
-    User
-}
+module.exports = {User}
 
